@@ -55,7 +55,6 @@ DOMAIN-SUFFIX,steampowered.com
 DOMAIN-SUFFIX,abcproxy.com
 DOMAIN-SUFFIX,icc2022.com
 DOMAIN-SUFFIX,cloud-hk.siliconflow.cn
-PROCESS-NAME,Telegram
 
 IP-CIDR,8.8.8.8/32,no-resolve
 IP-CIDR,8.8.4.4/32,no-resolve
