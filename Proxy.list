@@ -79,6 +79,7 @@ DOMAIN-SUFFIX,cloud-hk.siliconflow.cn
 DOMAIN-SUFFIX,codeium.com
 DOMAIN-SUFFIX,iterm2.com
 DOMAIN-SUFFIX,trae.ai
+DOMAIN-SUFFIX,dockerstatic.com
 
 IP-CIDR,8.8.8.8/32,no-resolve
 IP-CIDR,8.8.4.4/32,no-resolve
