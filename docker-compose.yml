@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  # 后端：subconverter 订阅转换服务 (使用支持 VLESS 的 Meta 分支镜像)
+  subconverter:
+    image: metacubex/subconverter:latest
+    container_name: subconverter
+    restart: always
+    ports:
+      - "25500:25500" # 映射后端端口 (左侧为宿主机端口，可按需修改)
+    environment:
+      - TZ=Asia/Shanghai
+    # volumes:
+    #   - ./subconverter-conf:/base  # 如果需要自定义后端规则和配置，可以取消注释挂载本地目录
+
+  # 前端：ACL4SSR-web 界面
+  acl4ssr-web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    container_name: acl4ssr-web
+    restart: always
+    ports:
+      - "58080:80"  # 映射前端端口 (将宿主机 58080 映射到容器 80)
+    depends_on:
+      - subconverter
